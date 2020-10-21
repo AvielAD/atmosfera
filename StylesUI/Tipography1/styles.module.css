@@ -1,0 +1,12 @@
+.tipography1{
+    font-family: CustomFont;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+
+}
+.tipography1Bold{
+    font-family: CustomFont;
+    font-size: 2rem;
+    font-weight: bold;
+}
