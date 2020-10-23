@@ -36,7 +36,7 @@ const Page = (props) => {
                 key={item.CarouselImages.url}
             >
                 <div className={Styles.carouselImage}>
-                        <img src={`http://www.atmosfera.la:1337${item.CarouselImages.url}`} 
+                        <img src={`https://api.atmosfera.la/${item.CarouselImages.url}`} 
                         alt={item.Title} width="100%" height="100%" />
                         <div className="container card-img-overlay d-flex flex-column justify-content-center align-items-center col-6" >
                         <p className="text-light h1">{item.Title}</p>

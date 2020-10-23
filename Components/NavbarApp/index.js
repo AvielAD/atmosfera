@@ -16,9 +16,9 @@ const NavbarApp = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     return (
-        <div>
+        <div className={Styles.NavbarLink}>
             <Navbar className="fixed-top bg-transparent" light expand="md">
-                <NavbarBrand href="/"> <Tipography1> Atmosfera</Tipography1></NavbarBrand>
+                <NavbarBrand href="/"> <Tipography1> Atmósfera</Tipography1></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
 
@@ -40,7 +40,11 @@ const NavbarApp = () => {
                         </NavItem>
 
                         <NavItem>
-                            <Link href="/components/">CONTACT</Link>
+                            <Link href="/">BLOG</Link>
+                        </NavItem>
+
+                        <NavItem>
+                            <Link href="/">CONTACT</Link>
                         </NavItem>
                     </Nav>
                 </Collapse>

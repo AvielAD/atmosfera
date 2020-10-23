@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const requestHelper = axios.create({
-    baseURL: 'http://www.atmosfera.la:1337/',
+    baseURL: 'https://api.atmosfera.la/',
 });
 
 export default {

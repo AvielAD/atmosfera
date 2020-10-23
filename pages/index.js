@@ -1,14 +1,13 @@
 import Head from 'next/head'
 import Header from '../Components/NavbarApp';
 import CarouselSlides from '../Components/CarouselSlides';
-import fetch from 'isomorphic-fetch';
 import api from '../Services/api';
 
 export default function Home(props) {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Atmósfera</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>

@@ -5,6 +5,11 @@
     font-weight: bold;
 
 }
+
+.tipography1:hover{
+    color: #0084ff;
+}
+
 .tipography1Bold{
     font-family: CustomFont;
     font-size: 2rem;
