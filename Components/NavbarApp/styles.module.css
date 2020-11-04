@@ -4,11 +4,15 @@
 .NavbarLink a{
     color: white;
     padding-right: 3rem;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     text-decoration: none;
 }
 
 .NavbarLink a:hover{
     color: #0084ff;
+}
+
+.topScroll{
+    background: black;
 }

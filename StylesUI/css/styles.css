@@ -1,0 +1,18 @@
+* {
+    font-family: CustomFont;
+}
+
+@font-face{
+    font-family: CustomFont;
+    src: url('../Font/Montserrat-Regular.ttf');
+}
+
+.margin-atop-10{
+    margin-top: 5rem;
+}
+.margin-abottom-15{
+    margin-top: 10rem;
+}
+.bg-blackAt{
+    background: black;
+}

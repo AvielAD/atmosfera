@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
     Collapse,
@@ -12,19 +12,32 @@ import {
 import Tipography1 from '../../StylesUI/Tipography1';
 import Styles from './styles.module.css';
 const NavbarApp = () => {
+    const [scrollBar, setScrollBar] = useState(false);
+    var listener = null;
 
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
+
+    useEffect(()=>{
+        listener = document.addEventListener("scroll", e=>{
+            var scrolled = document.scrollingElement.scrollTop;
+            if(scrolled >= 120)
+                setScrollBar(true);
+            else
+                setScrollBar(false)
+        })
+        document.removeEventListener("scroll", listener)
+    });
     return (
         <div className={Styles.NavbarLink}>
-            <Navbar className="fixed-top bg-transparent" light expand="md">
+            <Navbar className={`fixed-top ${scrollBar ? 'bg-blackAt': '' }`} light expand="md">
                 <NavbarBrand href="/"> <Tipography1> Atmósfera</Tipography1></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
 
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <Link href="/"> </Link>
+                            <Link href="/"> ABOUT US </Link>
                         </NavItem>
 
                         <NavItem>
@@ -40,7 +53,7 @@ const NavbarApp = () => {
                         </NavItem>
 
                         <NavItem>
-                            <Link href="/">BLOG</Link>
+                            <Link href="/Blog">BLOG</Link>
                         </NavItem>
 
                         <NavItem>

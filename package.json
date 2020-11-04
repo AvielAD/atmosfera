@@ -12,6 +12,7 @@
     "bootstrap": "^4.5.3",
     "isomorphic-fetch": "^3.0.0",
     "next": "9.5.5",
+    "next-images": "^1.6.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "reactstrap": "^8.6.0"
