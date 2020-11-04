@@ -27,13 +27,17 @@ export const getStaticProps = async ({params}) =>{
         props:{
             post
         },
+        revalidate:10
     }
 }
 export const getStaticPaths = async () =>{
-
+    const res = await (await api.post.posts()).data;
+    const paths = res.map((item)=>{
+        return {params: {slug: item.slug}}
+    })
     return{
-        paths: [],
-        fallback: true
+        paths,
+        fallback: false
     }
 }
 export default Details;
