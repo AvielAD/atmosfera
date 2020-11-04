@@ -10,5 +10,16 @@ export default {
             url: '/carousel-homes',
             method: 'get',
         })
+    },
+    post:{
+        posts: () => requestHelper({
+            url: '/blog-posts',
+            method: 'get',
+        }),
+        post: (slug) => requestHelper({
+            url: `/blog-posts?slug=${slug}`,
+            method: 'get'
+        })
     }
+
 }

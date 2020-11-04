@@ -32,7 +32,7 @@ const NavbarApp = () => {
         <div className={Styles.NavbarLink}>
             <Navbar className={`fixed-top ${scrollBar ? 'bg-blackAt': '' }`} light expand="md">
                 <NavbarBrand href="/"> <Tipography1> Atmósfera</Tipography1></NavbarBrand>
-                <NavbarToggler onClick={toggle} />
+                <NavbarToggler onClick={toggle} className="bg-white"/>
                 <Collapse isOpen={isOpen} navbar>
 
                     <Nav className="ml-auto" navbar>
@@ -53,7 +53,7 @@ const NavbarApp = () => {
                         </NavItem>
 
                         <NavItem>
-                            <Link href="/Blog">BLOG</Link>
+                            <Link href="/blog">BLOG</Link>
                         </NavItem>
 
                         <NavItem>

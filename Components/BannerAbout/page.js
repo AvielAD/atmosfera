@@ -1,20 +1,18 @@
 
-const Page = ({mapCards}) => {
+const Page = ({ mapCards }) => {
 
 
     const CardsList = mapCards.map((item, index) => {
 
         return (
-            <>
-                <div className="card col-md-4 border-0" key={index}>
-                    <img className="card-img-top" src={item.Image} alt="mission" />
-                    <div className="card-body">
-                        <p className="card-title h5">{item.Title}</p>
-                        <p className="card-text">{item.Description}</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
+            <div className="card col-md-4 border-0" key={index}>
+                <img className="card-img-top" src={item.Image} alt="mission" />
+                <div className="card-body">
+                    <p className="card-title h5">{item.Title}</p>
+                    <p className="card-text">{item.Description}</p>
+                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                 </div>
-            </>
+            </div>
         )
     })
 
